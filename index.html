@@ -1,1 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dear My Love ❤️</title>
+<style>
+  body{
+    padding: 25px;
+  }
+  .title {
+    color: #5C6AC4;
+  }
+  body{
+    padding: 25px;
+  }
+  .title {
+    color: #5C6AC4;
+  }
+  /* GENERAL SETTINGS */
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    background: #fce9ed;
+    color: #754457;
+    font-family: Georgia, serif;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  section {
+    padding: 55px 20px;
+  }
+  h1 {
+    color: #bd5477;
+  }
+  p {
+    line-height: 1.8;
+  }
+  /* COVER PAGE */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: linear-gradient(#f9dce5, #fff0f3);
+  }
+  .cover h1 {
+    font-size: 38px;
+  }
+  /* BUTTONS */
+  button {
+    border: 0;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: #c65c7c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Georgia, serif;
+  }
+  button:hover {
+    background: #a94365;
+    transform: scale(1.05);
+  }
+  /* LOVE LETTER */
+  .notebook {
+    background: #fffaf2;
+    max-width: 500px;
+    width: 100%;
+    margin: 25px auto;
+    padding: 30px 24px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px #b77b8b55;
+    line-height: 2;
+    border-left: 8px solid #e9b7c5;
+  }
+  /* HORIZONTAL PHOTO GALLERY */
+  .horizontal-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    border: 9px solid white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #b77b8b66;
+    padding: 20px 15px;
+    max-width: 32rem;
+    scrollbar-width: auto;
+  }
+  .photo-gallery {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    scroll-snap-align: center;
+    justify-content: left;
+    align-items: center;
+  }
+  .photo {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border: 9px solid white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #b77b8b66;
+    scroll-snap-align: center;
+  }
+  /* VIDEO */
+  video {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background: #000;
+  }
+  /* FOOTER */
+  footer {
+    background: #f3cbd6;
+    padding: 45px 15px;
+  }
+  /* HIDE SECTIONS */
+  .hidden {
+    display: none;
+  }
+  /* FADE ANIMATION */
+  .fade {
+    animation: fade 1.2s ease;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* MOBILE PHONES */
+  @media screen and (max-width: 600px) {
+    section {
+      padding: 40px 12px;
+    }
+    .cover h1 {
+      font-size: 30px;
+    }
+    h1 {
+      font-size: 25px;
+    }
+    .notebook {
+      padding: 22px 16px;
+    }
+    .horizontal-scroll {
+      padding: 15px 8px;
+    }
+    .photo-gallery {
+      gap: 2rem;
+      width: 32rem;
+      height: 20rem;
+    }
+    .photo {
+      width: 15rem;
+      height: 18rem;
+      flex-basis: 220px;
+      border-width: 6px;
+      background-color: #ce5172;
+    }
+    button {
+      font-size: 14px;
+      padding: 12px 20px;
+    }
+    video {
+      width: 100%;
+    }
+    footer {
+      padding: 35px 12px;
+    }
+  }
+  /* TABLETS */
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    section {
+      padding: 50px 25px;
+    }
+    .horizontal-scroll {
+      gap: 18px;
+    }
+    .horizontal-scroll .photo {
+      width: 260px;
+      height: 260px;
+      flex-basis: 260px;
+    }
+    .notebook {
+      max-width: 600px;
+    }
+    .horizontal-scroll {
+      padding: 15px 8px;
+    }
+    .photo-gallery {
+      gap: 0.40rem;
+      width: 32rem;
+      height: 20rem;
+    }
+    .photo {
+      width: 15rem;
+      height: 18rem;
+      flex-basis: 220px;
+      border-width: 6px;
+      background-color: blue;
+    }
+  }
+  /* LAPTOPS */
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .horizontal-scroll .photo {
+      width: 300px;
+      height: 300px;
+      flex-basis: 300px;
+    }
+    .notebook {
+      max-width: 550px;
+    }
+  }
+  /* LARGE DESKTOP / COMPUTERS */
+  @media screen and (min-width: 1441px) {
+    section {
+      padding: 70px 40px;
+    }
+    .horizontal-scroll {
+      gap: 25px;
+      padding: 25px;
+    }
+    .horizontal-scroll .photo {
+      width: 350px;
+      height: 350px;
+      flex-basis: 350px;
+    }
+    .notebook {
+      max-width: 650px;
+    }
+    video {
+      max-width: 800px;
+    }
+  }
+</style>
+</head>
+  <body>
+  <!-- COVER PAGE -->
+  <div class="cover" id="cover">
+    <h1>Dear, My Love bby❤️</h1>
+    <p>A little surprise made just for you.</p>
+    <button onclick="openLetter()">
+      Open Your Letter 💌
+    </button>
+  </div>
+  <!-- LOVE LETTER -->
+  <section id="letter" class="hidden">
+    <h1>To My love Girlfriend ❤️</h1>
+    <div class="notebook">
+      <h2>Dear My Love,</h2>
+      <p>
+        Happy Birthday, my love bby! ❤️
+        Today is your special day, and I want
+        you to know how thankful I am to have you.
+        You make my world brighter and my heart happier.
+        I hope all your dreams come true and i'm proud of you good lucky strong your health care my girlfriend.
+        I will always cherish you.
+      </p>
+      <p>Forever yours,<br>❤️ Raysel Ann C. Fuentes</p>
+    </div>
+    <button onclick="showMemories()">
+      Turn the Page ➜
+    </button>
+  </section>
+  <!-- MEMORIES -->
+  <section id="memories" class="hidden">
+    <h1>Our Beautiful Memories 📸</h1>
+    <p>let yous snap right to see our photos ❤️</p>
+    <div class="horizontal-scroll">
+      <div class="photo-gallery">
+        <img src="https://instagram.fmnl3-3.fna.fbcdn.net/v/t51.82787-15/657705873_17904803649387677_5779125255051313289_n.webp?_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=Mzg2MDQ5MTcyMzYzNDUyNDY2Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=8ZqP3Iz3AgIQ7kNvwHxZFFg&_nc_oc=AdpDMOzEMB4WdoJiDuQIp3N3sSaey9X9hSAkWfdplZLVclWVt4mSDECGRs4sWM84VVJAAYkXZsB9vIgqu2v58i_l&_nc_zt=23&_nc_ht=instagram.fmnl3-3.fna&_nc_gid=W0jEwFrUKY_I3kNSArjOQQ&_nc_ss=7b2a8&oh=00_AQT2p7gJJ_2e9sPS8yWQj-viyuJx4RTX6EdF6S1GiVZZBQ&oe=6AF606AB" 
+        class="photo" alt="Our favorite photo 1">
+        <img src="album_folder/21512850-a719-4034-947d-bb5b8782e8c4.jpg" 
+        class="photo" alt="Our favorite photo 2">
+        <img src="album_folder/6300965852622296474.jpg" 
+        class="photo" alt="Our favorite photo 3">
+        <img src="album_folder/662d0f79-bc89-44cd-a9a6-e8800821596c.jpg" 
+        class="photo" alt="Our favorite photo 4">
+        <img src="album_folder/fcbe538b-01d3-48bd-8f3a-7bc2e0ec845d.jpg" 
+        class="photo" alt="Our favorite photo 5">
+        <img src="https://instagram.fmnl37-2.fna.fbcdn.net/v/t51.82787-15/656262122_17905867722387677_5418276584835184735_n.webp?_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=Mzg2NTA2ODY3NjY0NzY2MDA4OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=GXwAUJarb6MQ7kNvwEz8i04&_nc_oc=AdqOJEu1LlxItr-bPDMpnaDE1Z-b7msSGjPze5YQ6dP8RUN9AYk_75QPy9DOj26ASMxwUKBb3OOSlTpbywXzVehY&_nc_zt=23&_nc_ht=instagram.fmnl37-2.fna&_nc_gid=u9mbjhrycOI2E-IgEpj5fw&_nc_ss=7b6a8&oh=00_AQRICj4gwCT4G3Ka3F1RxmmHonrV8IR27UsPBH4loTosDQ&oe=6AF60273" 
+        class="photo" alt="Our favorite photo 6">
+      </div>
+    </div>
+    <p>Every moment with you is my favorite memory. ❤️
+    </p>
+    <button onclick="showVideo()">
+      Next Surprise 🌅
+    </button>
+  </section>
+  <!-- VIDEO SURPRISE -->
+  <section id="horizon" class="hidden">
+    <h1>Our Love Is on Stories ❤️</h1>
+    <p>A little video made with love, just for you.</p>
+    <iframe width="350" height="595" src="https://www.youtube.com/embed/QcAdCz0aV_k" title="HBmygf2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>Beautiful, endless, and always worth looking forward to.</p>
+  </section>
+  <!-- FOOTER -->
+  <footer id="footer" class="hidden">
+    <h1>🎂 Happy Birthday To You! ❤️</h1>
+    <p>I love you more than words can say.</p>
+    <p>Forever and Always ♡</p>
+  </footer>
+  <script>
+  /* SHOW SELECTED SECTION */
+  function show(id) {
+    const sections = [
+      "letter",
+      "memories",
+      "horizon"
+    ];
+    sections.forEach(sectionId => {
+      document
+        .getElementById(sectionId)
+        .classList.add("hidden");
+    });
+    const footer = document.getElementById("footer");
+    footer.classList.add("hidden");
+    const selected = document.getElementById(id);
+    selected.classList.remove("hidden");
+    // Restart animation
+    selected.classList.remove("fade");
+    void selected.offsetWidth;
+    selected.classList.add("fade");
+    // Show footer only on final page
+    if (id === "horizon") {
+      footer.classList.remove("hidden");
+      footer.classList.add("fade");
+    }
+    // Scroll to selected section
+    selected.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+  /* OPEN LETTER */
+  function openLetter() {
 
+    document.getElementById("cover").classList.add("hidden");
+
+    show("letter");
+
+  }
+  /* SHOW MEMORIES */
+  function showMemories() {
+    show("memories");
+  }
+  /* SHOW VIDEO */
+  function showVideo() {
+    show("horizon");
+  }
+  </script>
+  </body>
+</html>
